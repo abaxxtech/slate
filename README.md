@@ -7,7 +7,7 @@
 Features
 ------------
 
-* **Clean, intuitive design** — With Slate, the description of your API is on the left side of your documentation, and all the code examples are on the right side. Inspired by [Stripe's](https://stripe.com/docs/api) and [PayPal's](https://developer.paypal.com/webapps/developer/docs/api/) API docs. Slate is responsive, so it looks great on tablets, phones, and even in print.
+* **Clean, intuitive design** — With Slate, the description of your API is on the left side of your documentation, and all the code examples are on the right side. 
 
 * **Everything on a single page** — Gone are the days when your users had to search through a million pages to find what they wanted. Slate puts the entire documentation on a single page. We haven't sacrificed linkability, though. As you scroll, your browser's hash will update to the nearest header, so linking to a particular point in the documentation is still natural and easy.
 
@@ -46,9 +46,9 @@ To start a container for slate, run:
 ```
 docker run -d --rm --name slate -p 4567:4567 -v $(pwd)/build:/srv/slate/build -v $(pwd)/source:/srv/slate/source slate
 ```
-and you will be able to access your site at http://localhost:4567.
+you can access your site at http://localhost:4567.
 
-To build your sources while the container is running, run:
+After making changes to index.html.md, you can re-build your sources while the container is running, simply run:
 ```
 docker exec -it slate /bin/bash -c "bundle exec middleman build"
 ```
